@@ -46,9 +46,8 @@ public class WordCounter {
 		ArrayList<Entry<String, Integer>> wordArray = new ArrayList<>(); // Create arrayList from hashMap
 		wordArray.addAll(wordsFound.entrySet());
 		wordArray.sort(Comparator.comparing(Entry<String, Integer>::getValue).reversed()); // Sort arrayList
-		wordArray.remove(0); // Exclude "" entry of deleted words
 
-		for (int i = 0; i < 20/* wordArray.size() */; i++) {
+		for (int i = 1; i < wordArray.size(); i++) {
 			System.out.println(wordArray.get(i)); // Print top 20 entries
 		}
 
