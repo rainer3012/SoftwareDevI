@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.MainController">
+  <children>
+    <AnchorPane layoutX="0.0" layoutY="0.0" prefHeight="400.0" prefWidth="600.0">
+      <children>
+        <TitledPane animated="false" layoutX="0.0" layoutY="0.0" prefHeight="399.9998779296875" prefWidth="600.0" text="">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <Button fx:id="displayButton" layoutX="50.0" layoutY="307.0" mnemonicParsing="false" onAction="#displayButtonClick" text="Display Results" />
+                <TextArea fx:id="resultsList" layoutX="298.0" layoutY="27.0" prefHeight="308.0" prefWidth="257.0" wrapText="true" />
+                <TextField id="resultsText" fx:id="numResults" alignment="TOP_LEFT" layoutX="39.0" layoutY="246.0" prefWidth="138.0" promptText="20" text="20" />
+                <Label layoutX="39.0" layoutY="119.0" text="Sort Order">
+                  <font>
+                    <Font name="System Bold" size="12.0" fx:id="x1" />
+                  </font>
+                </Label>
+                <Label font="$x1" layoutX="39.0" layoutY="223.0" text="Number of Results" />
+                <RadioButton id="choiceAscending" fx:id="choiceAsc" layoutX="39.0" layoutY="142.0" mnemonicParsing="false" onAction="#setOrderAsc" selected="false" text="Ascending">
+                  <toggleGroup>
+                    <ToggleGroup fx:id="sortGroup" />
+                  </toggleGroup>
+                </RadioButton>
+                <RadioButton id="choiceDescending" fx:id="choiceDesc" layoutX="39.0" layoutY="171.0" mnemonicParsing="false" onAction="#setOrderDesc" selected="true" text="Descending" toggleGroup="$sortGroup" />
+                <TextField fx:id="urlField" layoutX="39.0" layoutY="59.0" prefWidth="200.0" text="http://shakespeare.mit.edu/macbeth/full.html" />
+                <Label font="$x1" layoutX="39.0" layoutY="35.0" text="URL" />
+              </children>
+            </AnchorPane>
+          </content>
+        </TitledPane>
+      </children>
+    </AnchorPane>
+  </children>
+</AnchorPane>
